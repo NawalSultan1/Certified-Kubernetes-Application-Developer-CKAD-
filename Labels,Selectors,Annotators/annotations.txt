@@ -1,0 +1,4 @@
+annotations were originally used to provide detailed metadata in an object 
+annotations can nto be used in queries.
+Think of informations about licenses, maintainer, and more.
+Recently introduced resources may use annotations to provide additional functional information about the resources.

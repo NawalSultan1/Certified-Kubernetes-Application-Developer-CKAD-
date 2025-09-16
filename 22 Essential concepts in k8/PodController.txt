@@ -1,0 +1,38 @@
+Deployments:
+Most common way to get your app on kubernetes cereates a replica set for eadch deployment spec
+
+ReplicaSet:
+Creates a stable set of pods you will almost never create this directly.
+
+
+DaemonSet :
+A damemon set ensure that all nodes run a copy of a pod as nodes are added to the cluster pods are added to them 
+as nodes are removed fromt he cluster those pods are garbage collected.Deleting a daemonSet will clean up the podsit created common for system process like containerizedmonitor agents and proxies e.t.c.
+
+StatefulSet:
+StatefulSet is the workload API object used to manage stateful applications with prersistent storage Pod names are persistent 
+and are retained when recscheduled pods have DNS names unlike deployments.
+Storage stays associated with replacement pods volumes persist when pods are deleted pods are deployed and updated individually and in order.
+
+
+HorizontalPodAutoscaler - The Horizontal Pod Autoscaler automatically scales the number of pods in a replication controller, deployment, replica set or stateful set based on standard metrics like CPU utilization or custom metrics like request latency.
+PodDisruptionBudget - the ability to limit the number of Pods that are disrupted during upgrades and other planned events, allowing for higher availability while permitting the cluster administrator to manage the clusters nodes.
+Job - A Job creates one or more Pods and expects them to successfully terminate.
+CronJob - create Jobs on a schedule.
+
+
+Configuration
+ConfigMaps - an API object used to store non-confidential data in key-value pairs.
+Secrets - let you store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys.
+
+Networking
+Ingress - An API object that manages external access to the services in a cluster, typically HTTP. Ingress may provide load balancing, SSL termination and name-based virtual hosting.
+Service - an abstract way to expose an application running on a set of Pods as a network service.
+Network Policy - a specification of how groups of pods are allowed to communicate with each other and other network endpoints.
+
+Security - RBAC 
+ServiceAccount - provides an identity for processes that run in a Pod.
+Role - a Role is a set of permissions within a particular namespace; when you create a Role, you have to specify the namespace it belongs in.
+ClusterRole - ClusterRole is exactly the same as a Role except it is a non-namespaced resource. The resources have different names (Role and ClusterRole) because a Kubernetes object always has to be either namespaced or not namespaced; it can't be both.
+RoleBinding - grants the permissions defined in a Role to some group of Users or ServiceAccounts. It holds a list of subjects (Users, Groups, or ServiceAccounts), and a reference to the Role being granted. A RoleBinding grants permissions within a specific namespace. 
+ClusterRoleBinding - grants that access cluster-wide.

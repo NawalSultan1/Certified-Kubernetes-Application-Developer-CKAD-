@@ -1,0 +1,7 @@
+Labels are key value pairs that provides additional information about kuberentes resources.
+labels are used a lot in kubernetes 
+labels are set in resources like deployments and services, and use selectors to connect to related resources 
+the deployment finds its pods using elector 
+The Service finds its endpoint pods using a selector 
+
+Administratorrs can manually set labels to facilitate resource management and selection.

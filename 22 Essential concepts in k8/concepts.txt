@@ -1,0 +1,9 @@
+Workloads:
+Node :
+A node may be a virtual or physical machine depending on hte cluster . Each node contains the services necessary to run Pods, managed by the control plane.
+Cluster:
+A cluster is the founddation. All your containerized applications run on top of a cluster 
+
+Pod:
+the basic unit of work pods are the smallest deployable units of computing that can be created and managed in kubernetes pods are alsmnost never created on their own instead pod controllers do all the real workNamespace:
+kuberenetes supports multiple virtual clusters backed by thhe sdame physical cluster these virtual cluster are called namespaces namespaces are intended for use in environments with many user spread across multiple teams or projects.

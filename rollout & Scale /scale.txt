@@ -1,0 +1,5 @@
+scale :\
+
+kubectl scale deployment <deployment name>  --replicas=1,2,0:
+
+this command is used to manually change the number of replicas of a deployment.

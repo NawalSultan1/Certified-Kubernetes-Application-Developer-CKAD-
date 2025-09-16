@@ -1,0 +1,2 @@
+this command is used to get back to the previous state of the deployment or job and also shows you the history
+of the resource as well. 
